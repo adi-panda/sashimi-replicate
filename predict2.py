@@ -17,7 +17,7 @@ class Predictor(BasePredictor):
 
     def predict(
         self,
-        image: Path = Input(description="Input Image"),
+        image: Path = Input(description="Grayscale input image"),
     ) -> Output:
         """Run a single prediction on the model"""
         result = self.model.embed(image)
